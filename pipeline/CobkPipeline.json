@@ -1,0 +1,215 @@
+{
+	"name": "CobkPipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "COBK CSV to ds0cobk",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "ParquetSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "ParquetWriteSettings"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "MANDT",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "MANDT",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "KOKRS",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "KOKRS",
+									"type": "String",
+									"physicalType": "char"
+								}
+							},
+							{
+								"source": {
+									"name": "BELNR",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "BELNR",
+									"type": "String",
+									"physicalType": "char"
+								}
+							},
+							{
+								"source": {
+									"name": "GJAHR",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "GJAHR",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "VERSN",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "VERSN",
+									"type": "String",
+									"physicalType": "char"
+								}
+							},
+							{
+								"source": {
+									"name": "TIMESTMP",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TIMESTMP",
+									"type": "String",
+									"physicalType": "char"
+								}
+							},
+							{
+								"source": {
+									"name": "PERAB",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "PERAB",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "PERBI",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "PERBI",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "BLDAT",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "BLDAT",
+									"type": "DateTime",
+									"physicalType": "date"
+								}
+							},
+							{
+								"source": {
+									"name": "BUDAT",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "BUDAT",
+									"type": "DateTime",
+									"physicalType": "date"
+								}
+							},
+							{
+								"source": {
+									"name": "USNAM",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "USNAM",
+									"type": "String",
+									"physicalType": "char"
+								}
+							},
+							{
+								"source": {
+									"name": "BLTXT",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "BLTXT",
+									"type": "String",
+									"physicalType": "char"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "COBKCSV",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "ds0cobk",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "s0landing"
+		},
+		"annotations": [],
+		"lastPublishTime": "2021-02-24T20:07:14Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

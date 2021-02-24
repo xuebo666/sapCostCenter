@@ -1,0 +1,22 @@
+{
+	"name": "ds0objk",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls0landingarea",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "ds0objk",
+				"folderPath": "landingarea/objk",
+				"fileSystem": "adls2"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,22 @@
+{
+	"name": "ds0coep",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls0landingarea",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "ds0coep",
+				"folderPath": "landingarea/coep",
+				"fileSystem": "adls2"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

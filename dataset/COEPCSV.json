@@ -1,0 +1,134 @@
+{
+	"name": "COEPCSV",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sapADLSG2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "COEP.csv",
+				"folderPath": "COEP",
+				"fileSystem": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "MANDT",
+				"type": "String"
+			},
+			{
+				"name": "KOKRS",
+				"type": "String"
+			},
+			{
+				"name": "BELNR",
+				"type": "String"
+			},
+			{
+				"name": "WOGXXX",
+				"type": "String"
+			},
+			{
+				"name": "MEGXXX",
+				"type": "String"
+			},
+			{
+				"name": "MBGXXX",
+				"type": "String"
+			},
+			{
+				"name": "J_OBJNR",
+				"type": "String"
+			},
+			{
+				"name": "GJAHR",
+				"type": "String"
+			},
+			{
+				"name": "CO_WRTTP",
+				"type": "String"
+			},
+			{
+				"name": "VERSN",
+				"type": "String"
+			},
+			{
+				"name": "KSTAR",
+				"type": "String"
+			},
+			{
+				"name": "USPOB",
+				"type": "String"
+			},
+			{
+				"name": "RASSC",
+				"type": "String"
+			},
+			{
+				"name": "PARGB",
+				"type": "String"
+			},
+			{
+				"name": "BEKNZ",
+				"type": "String"
+			},
+			{
+				"name": "CO_MEINH",
+				"type": "String"
+			},
+			{
+				"name": "DZLENR",
+				"type": "String"
+			},
+			{
+				"name": "EBELN",
+				"type": "String"
+			},
+			{
+				"name": "PERNR_D",
+				"type": "String"
+			},
+			{
+				"name": "BUKRS",
+				"type": "String"
+			},
+			{
+				"name": "SCOPE_CV",
+				"type": "String"
+			},
+			{
+				"name": "DABRBEZ",
+				"type": "String"
+			},
+			{
+				"name": "RKE_HZSTMP",
+				"type": "String"
+			},
+			{
+				"name": "LAND1",
+				"type": "String"
+			},
+			{
+				"name": "CO_PERIO",
+				"type": "String"
+			},
+			{
+				"name": "OWAER",
+				"type": "String"
+			},
+			{
+				"name": "budat",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

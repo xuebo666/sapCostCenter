@@ -1,0 +1,131 @@
+{
+	"name": "costElementFact",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls0landingarea",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "part-00000-tid-1202389881791678525-1aa6e7b2-bb37-44b6-9942-c607c8b27b51-5-1-c000.snappy.parquet",
+				"folderPath": "enriched/costcenterfact",
+				"fileSystem": "adls2"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "Client",
+				"type": "INT32"
+			},
+			{
+				"name": "ConArea",
+				"type": "UTF8"
+			},
+			{
+				"name": "DocNum",
+				"type": "UTF8"
+			},
+			{
+				"name": "TotCcy",
+				"type": "FLOAT"
+			},
+			{
+				"name": "TotQty",
+				"type": "FLOAT"
+			},
+			{
+				"name": "TotQtyEnter",
+				"type": "FLOAT"
+			},
+			{
+				"name": "ObjNum",
+				"type": "UTF8"
+			},
+			{
+				"name": "FiscalYear",
+				"type": "INT32"
+			},
+			{
+				"name": "ValueType",
+				"type": "UTF8"
+			},
+			{
+				"name": "Version",
+				"type": "INT32"
+			},
+			{
+				"name": "CostElem",
+				"type": "UTF8"
+			},
+			{
+				"name": "SourceObj",
+				"type": "UTF8"
+			},
+			{
+				"name": "CoID",
+				"type": "INT32"
+			},
+			{
+				"name": "TradingArea",
+				"type": "UTF8"
+			},
+			{
+				"name": "DebCreInd",
+				"type": "UTF8"
+			},
+			{
+				"name": "UnitMeasure",
+				"type": "UTF8"
+			},
+			{
+				"name": "DocItemNum",
+				"type": "INT32"
+			},
+			{
+				"name": "PurDocNum",
+				"type": "INT32"
+			},
+			{
+				"name": "PersonnelNum",
+				"type": "INT32"
+			},
+			{
+				"name": "CoCode",
+				"type": "INT32"
+			},
+			{
+				"name": "ObjClass",
+				"type": "UTF8"
+			},
+			{
+				"name": "RefDateSet",
+				"type": "DATE"
+			},
+			{
+				"name": "TimeCreated",
+				"type": "DATE"
+			},
+			{
+				"name": "CountryKey",
+				"type": "UTF8"
+			},
+			{
+				"name": "Period",
+				"type": "INT32"
+			},
+			{
+				"name": "CcyKey",
+				"type": "UTF8"
+			},
+			{
+				"name": "PoDate",
+				"type": "DATE"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
