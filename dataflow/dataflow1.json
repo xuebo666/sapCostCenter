@@ -1,0 +1,24 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "costElementFact",
+						"type": "DatasetReference"
+					},
+					"name": "curatedCostElementFact"
+				}
+			],
+			"sinks": [],
+			"transformations": [
+				{
+					"name": "Filter1"
+				}
+			],
+			"script": "source(output(\n\t\tClient as integer,\n\t\tConArea as string,\n\t\tDocNum as string,\n\t\tTotCcy as float,\n\t\tTotQty as float,\n\t\tTotQtyEnter as float,\n\t\tObjNum as string,\n\t\tFiscalYear as integer,\n\t\tValueType as string,\n\t\tVersion as integer,\n\t\tCostElem as string,\n\t\tSourceObj as string,\n\t\tCoID as integer,\n\t\tTradingArea as string,\n\t\tDebCreInd as string,\n\t\tUnitMeasure as string,\n\t\tDocItemNum as integer,\n\t\tPurDocNum as integer,\n\t\tPersonnelNum as integer,\n\t\tCoCode as integer,\n\t\tObjClass as string,\n\t\tRefDateSet as date,\n\t\tTimeCreated as date,\n\t\tCountryKey as string,\n\t\tPeriod as integer,\n\t\tCcyKey as string,\n\t\tPoDate as date\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tformat: 'parquet') ~> curatedCostElementFact\ncuratedCostElementFact filter(ERROR_FUNCTION('@activity(__SINGLE_QUOTE__curatedCostElementFact__SINGLE_QUOTE__).output.ObjNum == \"QL10000003259\"')) ~> Filter1"
+		}
+	}
+}
