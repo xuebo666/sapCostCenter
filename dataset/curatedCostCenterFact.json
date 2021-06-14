@@ -1,0 +1,140 @@
+{
+	"name": "curatedCostCenterFact",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lsASD",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "curatedLayer"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Client",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ConArea",
+				"type": "varchar"
+			},
+			{
+				"name": "DocNum",
+				"type": "varchar"
+			},
+			{
+				"name": "TotCcy",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "TotQty",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "TotQtyEnter",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "ObjNum",
+				"type": "varchar"
+			},
+			{
+				"name": "FiscalYear",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ValueType",
+				"type": "varchar"
+			},
+			{
+				"name": "Version",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CostElem",
+				"type": "varchar"
+			},
+			{
+				"name": "SourceObj",
+				"type": "varchar"
+			},
+			{
+				"name": "CoID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "TradingArea",
+				"type": "varchar"
+			},
+			{
+				"name": "DebCreInd",
+				"type": "varchar"
+			},
+			{
+				"name": "UnitMeasure",
+				"type": "varchar"
+			},
+			{
+				"name": "DocItemNum",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PurDocNum",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PersonnelNum",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CoCode",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ObjClass",
+				"type": "varchar"
+			},
+			{
+				"name": "RefDateSet",
+				"type": "date"
+			},
+			{
+				"name": "TimeCreated",
+				"type": "date"
+			},
+			{
+				"name": "CountryKey",
+				"type": "varchar"
+			},
+			{
+				"name": "Period",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CcyKey",
+				"type": "varchar"
+			},
+			{
+				"name": "PoDate",
+				"type": "date"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "costElementFact"
+		}
+	}
+}
