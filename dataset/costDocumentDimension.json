@@ -1,0 +1,70 @@
+{
+	"name": "costDocumentDimension",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls0landingarea",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "part-00000-tid-7658616958735609397-1bf41076-e879-4d70-a702-c2538d376f57-1-1-c000.snappy.parquet",
+				"folderPath": "enriched/costdocumentdimension",
+				"fileSystem": "adls2"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "Client",
+				"type": "INT32"
+			},
+			{
+				"name": "ConArea",
+				"type": "UTF8"
+			},
+			{
+				"name": "DocNum",
+				"type": "UTF8"
+			},
+			{
+				"name": "FiscalYear",
+				"type": "INT32"
+			},
+			{
+				"name": "VerCODocHea",
+				"type": "INT32"
+			},
+			{
+				"name": "TimeCreated",
+				"type": "DATE"
+			},
+			{
+				"name": "FromPer",
+				"type": "INT32"
+			},
+			{
+				"name": "ToPer",
+				"type": "INT32"
+			},
+			{
+				"name": "DocDate",
+				"type": "DATE"
+			},
+			{
+				"name": "PoDate",
+				"type": "DATE"
+			},
+			{
+				"name": "UserName",
+				"type": "UTF8"
+			},
+			{
+				"name": "DocHeaText",
+				"type": "UTF8"
+			}
+		]
+	}
+}

@@ -1,0 +1,42 @@
+{
+	"name": "costObjectDimension",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls0landingarea",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "part-00000-tid-3557022868991664947-667f9662-a9cd-4798-98da-45b9b79e7fc6-3-1-c000.snappy.parquet",
+				"folderPath": "enriched/costobjectdimension",
+				"fileSystem": "adls2"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "Client",
+				"type": "INT32"
+			},
+			{
+				"name": "ObjLsNum",
+				"type": "UTF8"
+			},
+			{
+				"name": "ObjLsCoun",
+				"type": "INT32"
+			},
+			{
+				"name": "EquNum",
+				"type": "UTF8"
+			},
+			{
+				"name": "Date",
+				"type": "DATE"
+			}
+		]
+	}
+}
