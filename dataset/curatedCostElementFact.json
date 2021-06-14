@@ -5,6 +5,9 @@
 			"referenceName": "lsASD",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "curatedLayer"
+		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": [

@@ -5,6 +5,9 @@
 			"referenceName": "ls0landingarea",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "curatedLayer"
+		},
 		"annotations": [],
 		"type": "Parquet",
 		"typeProperties": {

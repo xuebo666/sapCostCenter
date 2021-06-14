@@ -5,6 +5,9 @@
 			"referenceName": "sapADLSG2",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "rawLayer"
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
