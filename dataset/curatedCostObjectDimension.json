@@ -1,0 +1,15 @@
+{
+	"name": "curatedCostObjectDimension",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lsASD",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "curatedLayer"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}

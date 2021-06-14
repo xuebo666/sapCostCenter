@@ -15,6 +15,14 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"source": {
+						"type": "ParquetSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						}
+					},
 					"sink": {
 						"type": "AzureSqlSink"
 					},
@@ -25,279 +33,344 @@
 							{
 								"source": {
 									"name": "Client",
-									"type": "Int32"
+									"type": "Int32",
+									"physicalType": "INT32"
 								},
 								"sink": {
 									"name": "Client",
-									"type": "Int32"
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
 									"name": "ConArea",
-									"type": "String"
+									"type": "String",
+									"physicalType": "UTF8"
 								},
 								"sink": {
 									"name": "ConArea",
-									"type": "String"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
 								"source": {
 									"name": "DocNum",
-									"type": "String"
+									"type": "String",
+									"physicalType": "UTF8"
 								},
 								"sink": {
 									"name": "DocNum",
-									"type": "String"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
 								"source": {
 									"name": "TotCcy",
-									"type": "Single"
+									"type": "Single",
+									"physicalType": "FLOAT"
 								},
 								"sink": {
 									"name": "TotCcy",
-									"type": "Double"
+									"type": "Double",
+									"physicalType": "float"
 								}
 							},
 							{
 								"source": {
 									"name": "TotQty",
-									"type": "Single"
+									"type": "Single",
+									"physicalType": "FLOAT"
 								},
 								"sink": {
 									"name": "TotQty",
-									"type": "Double"
+									"type": "Double",
+									"physicalType": "float"
 								}
 							},
 							{
 								"source": {
 									"name": "TotQtyEnter",
-									"type": "Single"
+									"type": "Single",
+									"physicalType": "FLOAT"
 								},
 								"sink": {
 									"name": "TotQtyEnter",
-									"type": "Double"
+									"type": "Double",
+									"physicalType": "float"
 								}
 							},
 							{
 								"source": {
 									"name": "ObjNum",
-									"type": "String"
+									"type": "String",
+									"physicalType": "UTF8"
 								},
 								"sink": {
 									"name": "ObjNum",
-									"type": "String"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
 								"source": {
 									"name": "FiscalYear",
-									"type": "Int32"
+									"type": "Int32",
+									"physicalType": "INT32"
 								},
 								"sink": {
 									"name": "FiscalYear",
-									"type": "Int32"
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
 									"name": "ValueType",
-									"type": "String"
+									"type": "String",
+									"physicalType": "UTF8"
 								},
 								"sink": {
 									"name": "ValueType",
-									"type": "String"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
 								"source": {
 									"name": "Version",
-									"type": "Int32"
+									"type": "Int32",
+									"physicalType": "INT32"
 								},
 								"sink": {
 									"name": "Version",
-									"type": "Int32"
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
 									"name": "CostElem",
-									"type": "String"
+									"type": "String",
+									"physicalType": "UTF8"
 								},
 								"sink": {
 									"name": "CostElem",
-									"type": "String"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
 								"source": {
 									"name": "SourceObj",
-									"type": "String"
+									"type": "String",
+									"physicalType": "UTF8"
 								},
 								"sink": {
 									"name": "SourceObj",
-									"type": "String"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
 								"source": {
 									"name": "CoID",
-									"type": "Int32"
+									"type": "Int32",
+									"physicalType": "INT32"
 								},
 								"sink": {
 									"name": "CoID",
-									"type": "Int32"
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
 									"name": "TradingArea",
-									"type": "String"
+									"type": "String",
+									"physicalType": "UTF8"
 								},
 								"sink": {
 									"name": "TradingArea",
-									"type": "String"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
 								"source": {
 									"name": "DebCreInd",
-									"type": "String"
+									"type": "String",
+									"physicalType": "UTF8"
 								},
 								"sink": {
 									"name": "DebCreInd",
-									"type": "String"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
 								"source": {
 									"name": "UnitMeasure",
-									"type": "String"
+									"type": "String",
+									"physicalType": "UTF8"
 								},
 								"sink": {
 									"name": "UnitMeasure",
-									"type": "String"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
 								"source": {
 									"name": "DocItemNum",
-									"type": "Int32"
+									"type": "Int32",
+									"physicalType": "INT32"
 								},
 								"sink": {
 									"name": "DocItemNum",
-									"type": "Int32"
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
 									"name": "PurDocNum",
-									"type": "Int32"
+									"type": "Int32",
+									"physicalType": "INT32"
 								},
 								"sink": {
 									"name": "PurDocNum",
-									"type": "Int32"
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
 									"name": "PersonnelNum",
-									"type": "Int32"
+									"type": "Int32",
+									"physicalType": "INT32"
 								},
 								"sink": {
 									"name": "PersonnelNum",
-									"type": "Int32"
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
 									"name": "CoCode",
-									"type": "Int32"
+									"type": "Int32",
+									"physicalType": "INT32"
 								},
 								"sink": {
 									"name": "CoCode",
-									"type": "Int32"
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
 									"name": "ObjClass",
-									"type": "String"
+									"type": "String",
+									"physicalType": "UTF8"
 								},
 								"sink": {
 									"name": "ObjClass",
-									"type": "String"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
 								"source": {
 									"name": "RefDateSet",
-									"type": "DateTime"
+									"type": "DateTime",
+									"physicalType": "DATE"
 								},
 								"sink": {
 									"name": "RefDateSet",
-									"type": "DateTime"
+									"type": "DateTime",
+									"physicalType": "date"
 								}
 							},
 							{
 								"source": {
 									"name": "TimeCreated",
-									"type": "DateTime"
+									"type": "DateTime",
+									"physicalType": "DATE"
 								},
 								"sink": {
 									"name": "TimeCreated",
-									"type": "DateTime"
+									"type": "DateTime",
+									"physicalType": "date"
 								}
 							},
 							{
 								"source": {
 									"name": "CountryKey",
-									"type": "String"
+									"type": "String",
+									"physicalType": "UTF8"
 								},
 								"sink": {
 									"name": "CountryKey",
-									"type": "String"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
 								"source": {
 									"name": "Period",
-									"type": "Int32"
+									"type": "Int32",
+									"physicalType": "INT32"
 								},
 								"sink": {
 									"name": "Period",
-									"type": "Int32"
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
 									"name": "CcyKey",
-									"type": "String"
+									"type": "String",
+									"physicalType": "UTF8"
 								},
 								"sink": {
 									"name": "CcyKey",
-									"type": "String"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
 								"source": {
 									"name": "PoDate",
-									"type": "DateTime"
+									"type": "DateTime",
+									"physicalType": "DATE"
 								},
 								"sink": {
 									"name": "PoDate",
-									"type": "DateTime"
+									"type": "DateTime",
+									"physicalType": "date"
 								}
 							}
-						]
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
 					}
 				},
+				"inputs": [
+					{
+						"referenceName": "costCenterFact",
+						"type": "DatasetReference"
+					}
+				],
 				"outputs": [
 					{
-						"referenceName": "curatedCostElementFact",
+						"referenceName": "curatedCostCenterFact",
 						"type": "DatasetReference"
 					}
 				]
